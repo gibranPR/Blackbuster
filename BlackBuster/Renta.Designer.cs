@@ -35,16 +35,16 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAgrega = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRentar = new System.Windows.Forms.Button();
+            this.tablao = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgrega = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRentar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablao)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -112,18 +112,45 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Nombre:";
             // 
-            // dataGridView1
+            // tablao
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tablao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablao.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Titulo,
             this.Precio,
             this.Tipo});
-            this.dataGridView1.Location = new System.Drawing.Point(15, 87);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 179);
-            this.dataGridView1.TabIndex = 9;
+            this.tablao.Location = new System.Drawing.Point(15, 87);
+            this.tablao.Name = "tablao";
+            this.tablao.Size = new System.Drawing.Size(538, 179);
+            this.tablao.TabIndex = 9;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.MinimumWidth = 80;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.Width = 80;
+            // 
+            // Titulo
+            // 
+            this.Titulo.HeaderText = "Título";
+            this.Titulo.MinimumWidth = 200;
+            this.Titulo.Name = "Titulo";
+            this.Titulo.Width = 200;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 110;
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 110;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.MinimumWidth = 100;
+            this.Tipo.Name = "Tipo";
             // 
             // btnAgrega
             // 
@@ -154,33 +181,6 @@
             this.btnRentar.Text = "Rentar";
             this.btnRentar.UseVisualStyleBackColor = true;
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.MinimumWidth = 80;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 80;
-            // 
-            // Titulo
-            // 
-            this.Titulo.HeaderText = "Título";
-            this.Titulo.MinimumWidth = 200;
-            this.Titulo.Name = "Titulo";
-            this.Titulo.Width = 200;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 110;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 110;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.MinimumWidth = 100;
-            this.Tipo.Name = "Tipo";
-            // 
             // Renta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,7 +191,7 @@
             this.Controls.Add(this.btnRentar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgrega);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tablao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
@@ -199,6 +199,7 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker1);
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -207,11 +208,10 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Renta";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.Renta_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Renta_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +225,7 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tablao;
         private System.Windows.Forms.Button btnAgrega;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRentar;

@@ -11,9 +11,11 @@ namespace BlackBuster
 {
     public partial class Renta : Form
     {
+        public static Renta rent;
         public Renta()
         {
             InitializeComponent();
+            rent = this;
         }
 
         private void Renta_Load(object sender, EventArgs e)
@@ -45,8 +47,20 @@ namespace BlackBuster
             string consulta = "Select Nombre from cliente where Id = " + txtNumero.Value + ";";
             ConectaBD accion = new ConectaBD();
             DataSet aux = accion.Select(consulta);
-            String name = aux.Tables[0].Rows[0].ItemArray[0].ToString();
-            txtNombre.Text = name;
+            try
+            {
+                String name = aux.Tables[0].Rows[0].ItemArray[0].ToString();
+                txtNombre.Text = name;
+            }catch(IndexOutOfRangeException ex)
+            {
+                MessageBox.Show("No se encontró el cliente, "+ex);
+            }
+            
+        }
+
+        public void insertaTablao(String [] si)
+        {
+            tablao.Rows.Add(si);
         }
 
         private void button1_Click(object sender, EventArgs e)

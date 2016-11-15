@@ -1,0 +1,23 @@
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\bin\Debug\BlackBuster.exe
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\bin\Debug\BlackBuster.pdb
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.csprojResolveAssemblyReference.cache
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.Principal.resources
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.Properties.Resources.resources
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.csproj.GenerateResource.Cache
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.exe
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.pdb
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.Renta.resources
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\bin\Debug\MySql.Data.dll
+c:\users\piedra\documents\visual studio 2015\Projects\BlackBuster\BlackBuster\obj\Debug\BlackBuster.Reportes.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.exe
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.pdb
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.csprojResolveAssemblyReference.cache
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Peliculas.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Principal.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Properties.Resources.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Renta.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Reportes.resources
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.csproj.GenerateResource.Cache
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\BlackBuster.exe
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\BlackBuster.pdb
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\MySql.Data.dll

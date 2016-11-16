@@ -129,6 +129,7 @@ namespace BlackBuster
             {
                 MySqlDataAdapter da = new MySqlDataAdapter(consulta, conexion);
                 da.Fill(list);
+                conexion.Close();
                 return list;
             }
             else

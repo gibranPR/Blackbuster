@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtFecha = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.NumericUpDown();
             this.btnBuscaCliente = new System.Windows.Forms.Button();
@@ -47,12 +47,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tablao)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // txtFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(353, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.txtFecha.Location = new System.Drawing.Point(353, 12);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(200, 20);
+            this.txtFecha.TabIndex = 1;
             // 
             // label1
             // 
@@ -180,6 +180,7 @@
             this.btnRentar.TabIndex = 12;
             this.btnRentar.Text = "Rentar";
             this.btnRentar.UseVisualStyleBackColor = true;
+            this.btnRentar.Click += new System.EventHandler(this.btnRentar_Click);
             // 
             // Renta
             // 
@@ -198,8 +199,7 @@
             this.Controls.Add(this.btnBuscaCliente);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Controls.Add(this.txtFecha);
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -218,7 +218,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown txtNumero;
         private System.Windows.Forms.Button btnBuscaCliente;

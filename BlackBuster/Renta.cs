@@ -12,6 +12,7 @@ namespace BlackBuster
     public partial class Renta : Form
     {
         public static Renta rent;
+        ConectaBD accion = new ConectaBD();
         public Renta()
         {
             InitializeComponent();
@@ -45,7 +46,7 @@ namespace BlackBuster
         private void btnBuscaCliente_Click(object sender, EventArgs e)
         {
             string consulta = "Select Nombre from cliente where Id = " + txtNumero.Value + ";";
-            ConectaBD accion = new ConectaBD();
+            
             DataSet aux = accion.Select(consulta);
             try
             {
@@ -66,6 +67,25 @@ namespace BlackBuster
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private int getFolio()
+        {
+            string consulta = "Select max(folio) from renta;";
+            DataSet aux = accion.Select(consulta);
+            String num = aux.Tables[0].Rows[0].ItemArray[0].ToString();
+            return int.Parse(num);
+        }
+
+        private void btnRentar_Click(object sender, EventArgs e)
+        {
+            //Agregamos la renta
+            String consulta = "INSERT INTO `renta` (`Fecha`, `Cliente`) VALUES ('"+ txtFecha.Value.ToString("yyyy-MM-dd HH:mm") + "', '"+ txtNumero.Value.ToString() + "');";
+            accion.Insertar(consulta);
+            //Agregamos el detalle de la renta
+            for (int i = 0; i < tablao.RowCount-1; i++) {
+                consulta = "INSERT INTO `detalle_renta` (`Folio`, `Video`) VALUES ('"+getFolio()+"', '"+tablao.Rows[i].Cells[0].Value.ToString()+"');";
+                accion.Insertar(consulta);
+            }
         }
     }
 }

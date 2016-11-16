@@ -21,3 +21,4 @@ C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.cspro
 C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\BlackBuster.exe
 C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\BlackBuster.pdb
 C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\bin\Debug\MySql.Data.dll
+C:\Users\Piedra\Source\Repos\Blackbuster\BlackBuster\obj\Debug\BlackBuster.Selecciona.resources

@@ -52,9 +52,13 @@ namespace BlackBuster
             {
                 String name = aux.Tables[0].Rows[0].ItemArray[0].ToString();
                 txtNombre.Text = name;
+                txtNombre.Enabled = false;
+                txtNumero.Enabled = false;
             }catch(IndexOutOfRangeException ex)
             {
                 MessageBox.Show("No se encontró el cliente, "+ex);
+                txtNombre.Enabled = true;
+                txtNumero.Enabled = true;
             }
             
         }
@@ -86,6 +90,13 @@ namespace BlackBuster
                 consulta = "INSERT INTO `detalle_renta` (`Folio`, `Video`) VALUES ('"+getFolio()+"', '"+tablao.Rows[i].Cells[0].Value.ToString()+"');";
                 accion.Insertar(consulta);
             }
+            MessageBox.Show("Renta procesada con éxito.");
+            Close();
         }
+        public void enableBoton()
+        {
+            btnRentar.Enabled = true;
+        }
+
     }
 }

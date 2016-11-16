@@ -117,12 +117,14 @@
             this.porClienteToolStripMenuItem.Name = "porClienteToolStripMenuItem";
             this.porClienteToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.porClienteToolStripMenuItem.Text = "Por cliente";
+            this.porClienteToolStripMenuItem.Click += new System.EventHandler(this.porClienteToolStripMenuItem_Click);
             // 
             // porTipoToolStripMenuItem
             // 
             this.porTipoToolStripMenuItem.Name = "porTipoToolStripMenuItem";
             this.porTipoToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.porTipoToolStripMenuItem.Text = "Por tipo";
+            this.porTipoToolStripMenuItem.Click += new System.EventHandler(this.porTipoToolStripMenuItem_Click);
             // 
             // porMembresiaToolStripMenuItem
             // 
@@ -195,6 +197,7 @@
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -226,6 +229,7 @@
             this.btnRentas.TabIndex = 2;
             this.btnRentas.Text = "Rentas";
             this.btnRentas.UseVisualStyleBackColor = true;
+            this.btnRentas.Click += new System.EventHandler(this.btnRentas_Click);
             // 
             // Principal
             // 

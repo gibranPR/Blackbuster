@@ -33,7 +33,8 @@ namespace BlackBuster
 
         private void porMembresiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Selecciona selecciona = new Selecciona(3);
+            selecciona.Show();
         }
 
         private void hacerVentaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,7 +60,34 @@ namespace BlackBuster
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            proximamente();
+        }
 
+        private void proximamente()
+        {
+            MessageBox.Show("Proximamente...");
+        }
+
+        private void btnRentas_Click(object sender, EventArgs e)
+        {
+            proximamente();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            proximamente();
+        }
+
+        private void porClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(1);
+            selecciona.Show();
+        }
+
+        private void porTipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(2);
+            selecciona.Show();
         }
     }
 }

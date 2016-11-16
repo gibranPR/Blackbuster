@@ -31,10 +31,10 @@ namespace BlackBuster
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             for (int i = 0; i < pelicula.Length; i++)
                 pelicula[i] = tablinha.CurrentRow.Cells[i].Value.ToString();
             Renta.rent.insertaTablao(pelicula);
+            Renta.rent.enableBoton();
         }
     }
 }

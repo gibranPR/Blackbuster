@@ -174,6 +174,7 @@
             // 
             // btnRentar
             // 
+            this.btnRentar.Enabled = false;
             this.btnRentar.Location = new System.Drawing.Point(459, 272);
             this.btnRentar.Name = "btnRentar";
             this.btnRentar.Size = new System.Drawing.Size(94, 78);

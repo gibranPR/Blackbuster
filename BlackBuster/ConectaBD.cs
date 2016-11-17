@@ -8,6 +8,10 @@ using System.Data;
 
 namespace BlackBuster
 {
+    /// <summary>
+    /// <para>Clase implementada por Gibran Piedra para el uso de una base de datos MySQL en C#.</para>
+    /// <remarks>Nota. Reemplaza servidor, basedatos, usuario y password al reutilizar esta clase. </remarks>
+    /// </summary>
     class ConectaBD
     {
         private MySqlConnection conexion;
@@ -35,8 +39,9 @@ namespace BlackBuster
 
             conexion = new MySqlConnection(connectionString);
         }
-
-        //Abrir conexion a la base de datos
+        /// <summary>
+        /// Metodo que abre la conexion a la base de datos
+        /// </summary>
         private bool abrirConexion()
         {
             try
@@ -64,8 +69,9 @@ namespace BlackBuster
                 return false;
             }
         }
-
-        //Cerrar conexion
+        /// <summary>
+        /// Metodo que cierra la conexion a la base de datos
+        /// </summary>
         private bool cerrarConexion()
         {
             try
@@ -79,9 +85,12 @@ namespace BlackBuster
                 return false;
             }
         }
-
-        //Insert statement
-        public void Insertar(String consulta)
+        /// <summary>
+        /// Metodo que ejecuta un insert a la base de datos
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        /// 
+        public void Insertar(string consulta)
         {
             if (this.abrirConexion() == true)
             {
@@ -94,8 +103,12 @@ namespace BlackBuster
             }
         }
 
-        //Update statement
-        public void Update(String consulta)
+        /// <summary>
+        /// Metodo que ejecuta un update a la base de datos
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        /// 
+        public void Update(string consulta)
         {
             if (this.abrirConexion() == true)
             {
@@ -111,9 +124,12 @@ namespace BlackBuster
                 this.cerrarConexion();
             }
         }
-
-        //Delete statement
-        public void Delete(String consulta)
+                /// <summary>
+        /// Metodo que ejecuta un delete a la base de datos
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        /// 
+        public void Delete(string consulta)
         {
             if (this.abrirConexion() == true)
             {
@@ -122,7 +138,12 @@ namespace BlackBuster
                 this.cerrarConexion();
             }
         }
-        public DataSet Select(String consulta)
+        /// <summary>
+        /// Metodo que ejecuta un Select a la base de datos
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        /// 
+        public DataSet Select(string consulta)
         {
             DataSet list = new DataSet();
             if (this.abrirConexion() == true)
@@ -137,7 +158,12 @@ namespace BlackBuster
                 return list;
             }
         }
-        public int Count(String consulta)
+        /// <summary>
+        /// Metodo que devuelve el conteo de registros de una base de datos de un select
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        /// 
+        public int Count(string consulta)
         {
             int Count = -1;
 

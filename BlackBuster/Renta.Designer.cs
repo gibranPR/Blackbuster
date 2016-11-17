@@ -43,6 +43,7 @@
             this.btnAgrega = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRentar = new System.Windows.Forms.Button();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tablao)).BeginInit();
             this.SuspendLayout();
@@ -124,6 +125,7 @@
             this.tablao.Name = "tablao";
             this.tablao.Size = new System.Drawing.Size(538, 179);
             this.tablao.TabIndex = 9;
+            this.tablao.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.tablao_RowsAdded);
             // 
             // Codigo
             // 
@@ -183,6 +185,18 @@
             this.btnRentar.UseVisualStyleBackColor = true;
             this.btnRentar.Click += new System.EventHandler(this.btnRentar_Click);
             // 
+            // lblTotal
+            // 
+            this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblTotal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTotal.Location = new System.Drawing.Point(157, 272);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(164, 78);
+            this.lblTotal.TabIndex = 13;
+            this.lblTotal.Text = "$0.00";
+            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Renta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +204,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(584, 362);
             this.ControlBox = false;
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.btnRentar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgrega);
@@ -234,5 +249,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

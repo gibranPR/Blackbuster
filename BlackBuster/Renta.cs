@@ -60,9 +60,10 @@ namespace BlackBuster
                 txtNombre.Enabled = true;
                 txtNumero.Enabled = true;
             }
-            
         }
-
+        /// <summary>
+        /// Metodo que inserta un arreglo de strings a la tabla
+        /// </summary>
         public void insertaTablao(String [] si)
         {
             tablao.Rows.Add(si);
@@ -72,6 +73,9 @@ namespace BlackBuster
         {
             Close();
         }
+        /// <summary>
+        /// Metodo que devuelve el ultimo folio registrado
+        /// </summary>
         private int getFolio()
         {
             string consulta = "Select max(folio) from renta;";
@@ -97,6 +101,24 @@ namespace BlackBuster
         {
             btnRentar.Enabled = true;
         }
+        private void tablao_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            lblTotal.Text = "$"+suma().ToString();
+        }
 
+        /// <summary>
+        /// Metodo que devuelve el total de precios en la tabla tablao
+        /// </summary>
+        private Double suma()
+        {
+            String aux;
+            Double total = 0.0;
+            for (int i = 0; i < tablao.RowCount-1; i++)
+            {
+                aux = tablao.Rows[i].Cells[2].Value.ToString();
+                total += Double.Parse(aux);
+            }
+            return total;
+        }
     }
 }

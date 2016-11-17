@@ -36,7 +36,36 @@ namespace BlackBuster
                 case 3:
                     totalMembresia();
                     break;
+                case 4:
+                    tdCliente();
+                    break;
+                case 5:
+                    tdTipo();
+                    break;
+                case 6:
+                    tdMembresia();
+                    break;
             }
+        }
+
+        private void tdCliente()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void tdTipo()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void tdMembresia()
+        {
+            lblAux.Text = "Selecciona el tipo de membresia \ny genera el reporte del total vendido.";
+            string consulta = "SELECT * FROM `membresia`;";
+            DataSet aux = accion.Select(consulta);
+            cmbAux.DataSource = aux.Tables[0];
+            cmbAux.ValueMember = "Id";
+            cmbAux.DisplayMember = "Nombre";
         }
 
         private void totalMembresia()
@@ -68,10 +97,18 @@ namespace BlackBuster
             cmbAux.ValueMember = "Id";
             cmbAux.DisplayMember = "Id";
         }
+        /// <summary>
+        /// Metodo que regresa el valor del combobox
+        /// </summary>
         private String getElemento()
         {
             return cmbAux.SelectedValue.ToString();
         }
+        /// <summary>
+        /// Metodo que genera un unico resultado de la 
+        /// </summary>
+        /// <param name="consulta">Aqui va el SQL a ejecutar</param>
+        ///
         private String generaTotal(String consulta)
         {
             DataSet aux = accion.Select(consulta);

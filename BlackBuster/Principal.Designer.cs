@@ -149,18 +149,21 @@
             this.porClienteToolStripMenuItem1.Name = "porClienteToolStripMenuItem1";
             this.porClienteToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.porClienteToolStripMenuItem1.Text = "Por Cliente";
+            this.porClienteToolStripMenuItem1.Click += new System.EventHandler(this.porClienteToolStripMenuItem1_Click);
             // 
             // porTipoToolStripMenuItem1
             // 
             this.porTipoToolStripMenuItem1.Name = "porTipoToolStripMenuItem1";
             this.porTipoToolStripMenuItem1.Size = new System.Drawing.Size(154, 22);
             this.porTipoToolStripMenuItem1.Text = "Por tipo";
+            this.porTipoToolStripMenuItem1.Click += new System.EventHandler(this.porTipoToolStripMenuItem1_Click);
             // 
             // porMembresíaToolStripMenuItem
             // 
             this.porMembresíaToolStripMenuItem.Name = "porMembresíaToolStripMenuItem";
             this.porMembresíaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.porMembresíaToolStripMenuItem.Text = "Por membresía";
+            this.porMembresíaToolStripMenuItem.Click += new System.EventHandler(this.porMembresíaToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -220,6 +223,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(784, 562);
             this.tableLayoutPanel1.TabIndex = 3;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // btnRentas
             // 

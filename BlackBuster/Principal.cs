@@ -31,12 +31,7 @@ namespace BlackBuster
 
         }
 
-        private void porMembresiaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Selecciona selecciona = new Selecciona(3);
-            selecciona.Show();
-        }
-
+        
         private void hacerVentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Renta renta = new Renta();
@@ -88,6 +83,34 @@ namespace BlackBuster
         {
             Selecciona selecciona = new Selecciona(2);
             selecciona.Show();
+        }
+        private void porMembresiaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(3);
+            selecciona.Show();
+        }
+
+        private void porClienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(4);
+            selecciona.Show();
+        }
+
+        private void porTipoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(5);
+            selecciona.Show();
+        }
+
+        private void porMembresíaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Selecciona selecciona = new Selecciona(6);
+            selecciona.Show();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
